@@ -56,8 +56,12 @@
 ## 📊 GitHub Analytics & Contributions
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Pranjal1342&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117" height="175" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Pranjal1342&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117" height="175" alt="Top Languages" />
+  <a href="https://github.com/Pranjal1342">
+    <img src="https://streak-stats.demolab.com?user=Pranjal1342&theme=tokyonight&hide_border=true" height="175" alt="GitHub Streak" />
+  </a>
+  <a href="https://github.com/Pranjal1342">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Pranjal1342&layout=compact&theme=tokyonight&hide_border=true" height="175" alt="Top Languages" />
+  </a>
 </div>
 
 ---
