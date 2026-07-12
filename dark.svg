@@ -123,26 +123,32 @@
       <text x="0" y="56" class="font-sans text-title">PRANJAL H. DOHARE</text>
     </g>
 
-    <!-- Cycling Typing Role Line -->
+    <!-- Cycling Typing Role Line with Dynamic Per-Role Cursors -->
     <g transform="translate(488, 154)" class="font-mono">
       <g opacity="1">
         <animate attributeName="opacity" values="1;1;0;0;0;0;1" keyTimes="0;0.31;0.33;0.64;0.66;0.98;1" dur="9s" repeatCount="indefinite" />
         <text x="0" y="0" font-size="15" font-weight="700" fill="#EE4C2C">&gt; Role: </text>
         <text x="68" y="0" font-size="15" font-weight="700" fill="#F8FAFC">AI &amp; ML Engineer</text>
+        <rect x="220" y="-12" width="8" height="15" fill="#EE4C2C">
+          <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite" />
+        </rect>
       </g>
       <g opacity="0">
         <animate attributeName="opacity" values="0;0;1;1;0;0;0" keyTimes="0;0.31;0.33;0.64;0.66;0.98;1" dur="9s" repeatCount="indefinite" />
         <text x="0" y="0" font-size="15" font-weight="700" fill="#38BDF8">&gt; Role: </text>
         <text x="68" y="0" font-size="15" font-weight="700" fill="#F8FAFC">Deep Learning &amp; Applied Systems Engineer</text>
+        <rect x="438" y="-12" width="8" height="15" fill="#38BDF8">
+          <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite" />
+        </rect>
       </g>
       <g opacity="0">
         <animate attributeName="opacity" values="0;0;0;0;1;1;0" keyTimes="0;0.31;0.33;0.64;0.66;0.98;1" dur="9s" repeatCount="indefinite" />
         <text x="0" y="0" font-size="15" font-weight="700" fill="#10B981">&gt; Role: </text>
         <text x="68" y="0" font-size="15" font-weight="700" fill="#F8FAFC">RAG &amp; High-Performance ML Architect</text>
+        <rect x="392" y="-12" width="8" height="15" fill="#10B981">
+          <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite" />
+        </rect>
       </g>
-      <rect x="375" y="-12" width="8" height="15" fill="#EE4C2C">
-        <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite" />
-      </rect>
     </g>
 
     <!-- ================= QUANTIFIED ACHIEVEMENT STRIP (Solid Engineering Cards) ================= -->
