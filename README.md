@@ -20,7 +20,7 @@
 
 ---
 
-## ⚡ Quick Proof of Work & Quantified Impact
+## Quick Proof of Work & Quantified Impact
 
 | Metric | Project / Domain | Stack & Architecture | Repository |
 | :--- | :--- | :--- | :--- |
@@ -30,7 +30,7 @@
 
 ---
 
-## 🚀 Featured Engineering & Open Source Projects
+## Featured Engineering & Open Source Projects
 
 ### 1. [Intelligent Candidate Discovery & Ranking System](https://github.com/Pranjal1342/Intelligent-Candidate-Discovery-Ranking-System)
 > **Offline multi-stage pipeline ranking 100,000 candidate profiles in ~3.5 seconds.**
@@ -45,7 +45,7 @@
 
 ---
 
-## 🛠️ Technical Stack & Core Competencies
+## Technical Stack & Core Competencies
 
 - **Agentic AI & Orchestration**: Model Context Protocol (MCP), LangChain, LangGraph, Multi-Agent Tool-Calling Systems, RAG Pipelines
 - **Deep Learning & Machine Learning (DL / ML)**: PyTorch, LightGBM, LoRA Fine-Tuning
@@ -56,17 +56,19 @@
 ## 📊 GitHub Analytics & Contributions
 
 <div align="center">
-  <a href="https://github.com/Pranjal1342">
-    <img src="https://streak-stats.demolab.com?user=Pranjal1342&theme=tokyonight&hide_border=true" height="175" alt="GitHub Streak" />
-  </a>
-  <a href="https://github.com/Pranjal1342">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Pranjal1342&layout=compact&theme=tokyonight&hide_border=true" height="175" alt="Top Languages" />
-  </a>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Pranjal1342&theme=tokyonight" height="175" alt="GitHub Stats" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Pranjal1342&theme=tokyonight" height="175" alt="Top Languages" />
+</div>
+
+<br />
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Pranjal1342&theme=tokyo-night&hide_border=true" width="95%" alt="Contribution Activity Graph" />
 </div>
 
 ---
 
-## 📬 Connect & Collaborate
+## Connect & Collaborate
 
 - **LinkedIn**: [Pranjal Dohare](https://www.linkedin.com/in/pranjal-dohare-892b262a6/)
 - **Email**: [pranjaldohare8@gmail.com](mailto:pranjaldohare8@gmail.com)
