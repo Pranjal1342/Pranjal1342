@@ -56,14 +56,14 @@
 ## 📊 GitHub Analytics & Contributions
 
 <div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Pranjal1342&theme=tokyonight" height="175" alt="GitHub Stats" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Pranjal1342&theme=tokyonight" height="175" alt="Top Languages" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Pranjal1342&theme=dracula" height="175" alt="GitHub Stats" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Pranjal1342&theme=dracula" height="175" alt="Top Languages" />
 </div>
 
 <br />
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Pranjal1342&theme=tokyo-night&hide_border=true" width="95%" alt="Contribution Activity Graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Pranjal1342&theme=dracula&hide_border=true" width="95%" alt="Contribution Activity Graph" />
 </div>
 
 ---
