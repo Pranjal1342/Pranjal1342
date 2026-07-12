@@ -25,7 +25,7 @@
 | Metric | Project / Domain | Stack & Architecture | Repository |
 | :--- | :--- | :--- | :--- |
 | **100K Profiles in ~3.5s** | Offline Candidate Discovery & Ranking Pipeline | BM25 Retrieval + LightGBM LambdaRank + Gemma3 Pairwise Judgments | [View Repo](https://github.com/Pranjal1342/Intelligent-Candidate-Discovery-Ranking-System) |
-| **96.49% Acc / 0.996 AUC** | Clinical Breast Cancer ML Classifier | End-to-end clinical feature extraction & high-precision classification | [*Verified Metric*](https://github.com/Pranjal1342) |
+| **SRE OpenEnv (RL)** | Autonomous SRE Incident Remediation | Reinforcement Learning Environment + LoRA Fine-Tuned Qwen2.5 | [View Repo](https://github.com/Pranjal1342/agentic-sre-openenv) |
 | **IEEE CIS x MSRIT '26** | MSME Payment Compliance Orchestration | Multi-Agent Model Context Protocol (MCP) Hackathon System | [*Active Build*](https://github.com/Pranjal1342) |
 
 ---
