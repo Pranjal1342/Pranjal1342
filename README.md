@@ -8,10 +8,15 @@
 
 <div align="center">
 
-**AI & ML Engineer • Agentic Workflows • MCP & RAG Systems • Deep Learning & ML**  
-📍 India &nbsp;|&nbsp; 🎓 B.Tech Computer Science (AI & ML Undergrad) &nbsp;|&nbsp; ✉️ [pranjaldohare8@gmail.com](mailto:pranjaldohare8@gmail.com) &nbsp;|&nbsp; 🔗 [LinkedIn Profile](https://www.linkedin.com/in/pranjal-dohare-892b262a6/) &nbsp;|&nbsp; ⭐ [GitHub Profile](https://github.com/Pranjal1342)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pranjal-dohare-892b262a6/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Pranjal1342)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pranjaldohare8@gmail.com)
 
 </div>
+
+> **AI & ML Systems Engineer** specializing in Deep Learning, Model Context Protocol (MCP) orchestrations, and high-throughput Hybrid RAG systems.  
+> **Location:** India &nbsp;•&nbsp; **Education:** B.Tech Computer Science (AI & ML Undergrad)
+
 
 ---
 
