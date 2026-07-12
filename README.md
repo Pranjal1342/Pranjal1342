@@ -53,7 +53,7 @@
 
 ---
 
-## 📊 GitHub Analytics & Contributions
+## GitHub Analytics & Contributions
 
 <div align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Pranjal1342&theme=dracula" height="175" alt="GitHub Stats" />
