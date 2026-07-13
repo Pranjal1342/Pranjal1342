@@ -1,8 +1,8 @@
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="light.svg">
-    <img alt="Pranjal H. Dohare — AI &amp; ML Engineer | Agentic AI &amp; MCP Systems Architect" src="dark.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="dark.svg?v=2.8">
+    <source media="(prefers-color-scheme: light)" srcset="light.svg?v=2.8">
+    <img alt="Pranjal H. Dohare — AI &amp; ML Engineer | Agentic AI &amp; MCP Systems Architect" src="dark.svg?v=2.8" width="100%">
   </picture>
 </div>
 
@@ -47,9 +47,9 @@
 
 ## Technical Stack & Core Competencies
 
-- **Agentic AI & Orchestration**: Model Context Protocol (MCP), LangChain, LangGraph, Multi-Agent Tool-Calling Systems, RAG Pipelines
+- **Agentic AI & Orchestration**: Model Context Protocol (MCP), Multi-Agent Tool-Calling Systems, RAG Pipelines
 - **Deep Learning & Machine Learning (DL / ML)**: PyTorch, LightGBM, LoRA Fine-Tuning
-- **Backend & Data Systems**: Python, FastAPI, Flask, SQL, PostgreSQL, Docker, Hybrid Retrieval (BM25 + Dense Vector)
+- **Backend & Data Systems**: Python, FastAPI, Flask, SQL, PostgreSQL,Hybrid Retrieval (BM25 + Dense Vector)
 
 ---
 
