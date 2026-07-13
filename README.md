@@ -15,7 +15,7 @@
 </div>
 
 > **AI & ML Systems Engineer** specializing in Deep Learning, Model Context Protocol (MCP) orchestrations, and high-throughput Hybrid RAG systems.  
-> **Location:** India &nbsp;•&nbsp; **Education:** B.Tech Computer Science (AI & ML Undergrad)
+> **Location:** India &nbsp;•&nbsp; 
 
 
 ---
