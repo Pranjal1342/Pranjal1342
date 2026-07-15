@@ -61,15 +61,30 @@
 
 ## GitHub Analytics & Contributions
 
+> **Real-time engineering telemetry reflecting active open-source development, code throughput, and primary language specialization.**
+
 <div align="center">
-  <img src="https://github-readme-stats-fast.vercel.app/api?username=Pranjal1342&show_icons=true&theme=dracula" height="175" alt="GitHub Stats" />
-  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=Pranjal1342&layout=compact&theme=dracula" height="175" alt="Top Languages" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-fast.vercel.app/api?username=Pranjal1342&show_icons=true&bg_color=030712&title_color=22D3EE&text_color=F8FAFC&icon_color=7C3AED&hide_rank=true&hide_border=true&border_radius=12">
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats-fast.vercel.app/api?username=Pranjal1342&show_icons=true&bg_color=FFFFFF&title_color=06B6D4&text_color=0F172A&icon_color=2563EB&hide_rank=true&hide_border=true&border_radius=12">
+    <img alt="GitHub Stats" src="https://github-readme-stats-fast.vercel.app/api?username=Pranjal1342&show_icons=true&bg_color=030712&title_color=22D3EE&text_color=F8FAFC&icon_color=7C3AED&hide_rank=true&hide_border=true&border_radius=12" height="175">
+  </picture>
+  &nbsp;
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=Pranjal1342&layout=compact&langs_count=8&hide=HTML,CSS,Dockerfile&bg_color=030712&title_color=22D3EE&text_color=F8FAFC&hide_border=true&border_radius=12">
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=Pranjal1342&layout=compact&langs_count=8&hide=HTML,CSS,Dockerfile&bg_color=FFFFFF&title_color=06B6D4&text_color=0F172A&hide_border=true&border_radius=12">
+    <img alt="Top Languages" src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=Pranjal1342&layout=compact&langs_count=8&hide=HTML,CSS,Dockerfile&bg_color=030712&title_color=22D3EE&text_color=F8FAFC&hide_border=true&border_radius=12" height="175">
+  </picture>
 </div>
 
 <br />
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Pranjal1342&theme=dracula&hide_border=true" width="95%" alt="Contribution Activity Graph" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=Pranjal1342&bg_color=030912&color=94A3B8&line=22D3EE&point=7C3AED&hide_border=true">
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=Pranjal1342&bg_color=FFFFFF&color=64748B&line=06B6D4&point=2563EB&hide_border=true">
+    <img alt="Contribution Activity Graph" src="https://github-readme-activity-graph.vercel.app/graph?username=Pranjal1342&bg_color=030912&color=94A3B8&line=22D3EE&point=7C3AED&hide_border=true" width="95%">
+  </picture>
 </div>
 
 ---
