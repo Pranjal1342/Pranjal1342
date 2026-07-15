@@ -1,17 +1,22 @@
 <svg width="1180" height="610" viewBox="0 0 1180 610" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
+    <linearGradient id="brand-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#2DD4BF" />
+      <stop offset="100%" stop-color="#A78BFA" />
+    </linearGradient>
     <style>
       .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
       .font-mono { font-family: 'SF Mono', SFMono-Regular, ui-monospace, Menlo, Consolas, monospace; }
-      .text-title { font-size: 34px; font-weight: 800; letter-spacing: -0.5px; fill: #F0F6FC; }
-      .text-heading { font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px; fill: #8B949E; text-transform: uppercase; }
-      .text-metric { font-size: 21px; font-weight: 800; fill: #F0F6FC; }
-      .text-metric-sub { font-size: 12px; font-weight: 600; fill: #C9D1D9; }
-      .text-metric-desc { font-size: 11px; font-weight: 500; fill: #8B949E; }
-      .text-info-label { font-size: 13px; font-weight: 600; fill: #8B949E; }
-      .text-info-val { font-size: 13px; font-weight: 500; fill: #C9D1D9; }
-      .text-ascii { font-size: 11.5px; font-weight: 600; fill: #C9D1D9; line-height: 1.45; }
-      .text-pill { font-size: 12px; font-weight: 600; fill: #C9D1D9; }
+      .text-title { font-size: 34px; font-weight: 800; letter-spacing: -0.5px; fill: url(#brand-gradient); }
+      .text-heading { font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px; fill: #94A3B8; text-transform: uppercase; }
+      .text-metric { font-size: 21px; font-weight: 800; fill: url(#brand-gradient); }
+      .text-metric-sub { font-size: 12px; font-weight: 600; fill: #F0F6FC; }
+      .text-metric-desc { font-size: 11px; font-weight: 500; fill: #94A3B8; }
+      .text-info-label { font-size: 13px; font-weight: 600; fill: #94A3B8; }
+      .text-info-val { font-size: 13px; font-weight: 500; fill: #E2E8F0; }
+      .text-ascii { font-size: 11.5px; font-weight: 600; line-height: 1.45; }
+      .text-pill { font-size: 12px; font-weight: 600; fill: #E2E8F0; }
     </style>
   </defs>
 
@@ -28,77 +33,77 @@
     <circle cx="48" cy="46" r="6" fill="#30363D" />
     <circle cx="68" cy="46" r="6" fill="#484F58" />
     <circle cx="88" cy="46" r="6" fill="#6E7681" />
-    <text x="112" y="51" class="font-mono" font-size="14" font-weight="700" fill="#8B949E" letter-spacing="1">pranjal@ml-core:~</text>
+    <text x="112" y="51" class="font-mono" font-size="14" font-weight="700" fill="#94A3B8" letter-spacing="1">pranjal@ml-core:~</text>
 
     <!-- Divider Line -->
     <line x1="24" y1="68" x2="440" y2="68" stroke="#30363D" stroke-width="1" />
 
-    <!-- Architectural Monochrome ASCII Art: ML & Deep Learning Pipeline -->
+    <!-- Architectural Dracula ASCII Art: ML & Deep Learning Pipeline -->
     <g class="font-mono text-ascii" transform="translate(42, 95)">
-      <text x="0" y="16" fill="#8B949E">
+      <text x="0" y="16" fill="#8BE9FD">
         +-----------------------------------+
       </text>
-      <text x="0" y="34" fill="#F0F6FC">
+      <text x="0" y="34" fill="#FF79C6">
         |     DL &amp; ML ENGINE : ARCH v2.6    |
       </text>
-      <text x="0" y="52" fill="#8B949E">
+      <text x="0" y="52" fill="#8BE9FD">
         +-----------------------------------+
       </text>
-      <text x="0" y="76" fill="#C9D1D9">
+      <text x="0" y="76" fill="#F8FAFC">
              [ INPUT TENSORS / EMBEDDINGS ]
       </text>
-      <text x="0" y="96" fill="#6E7681">
+      <text x="0" y="96" fill="#BD93F9">
                            ||
                            \/
       </text>
-      <text x="0" y="118" fill="#C9D1D9">
+      <text x="0" y="118" fill="#8BE9FD">
               +-----------------------+
       </text>
-      <text x="0" y="136" fill="#F0F6FC">
+      <text x="0" y="136" fill="#FF79C6">
               |  DEEP LEARNING NODES  |
       </text>
-      <text x="0" y="154" fill="#C9D1D9">
+      <text x="0" y="154" fill="#8BE9FD">
               +-----------------------+
       </text>
-      <text x="0" y="176" fill="#6E7681">
+      <text x="0" y="176" fill="#BD93F9">
                  /                 \
                 v                   v
       </text>
-      <text x="0" y="198" fill="#C9D1D9">
+      <text x="0" y="198" fill="#50FA7B">
         [RAG RETRIEVAL]       [LAMBDARANK]
       </text>
-      <text x="0" y="220" fill="#6E7681">
+      <text x="0" y="220" fill="#BD93F9">
                  \                   /
                   v                 v
       </text>
-      <text x="0" y="244" fill="#C9D1D9">
+      <text x="0" y="244" fill="#8BE9FD">
               +-----------------------+
       </text>
-      <text x="0" y="262" fill="#F0F6FC">
+      <text x="0" y="262" fill="#FF79C6">
               |    MCP AGENT ROUTER   |
       </text>
-      <text x="0" y="280" fill="#C9D1D9">
+      <text x="0" y="280" fill="#8BE9FD">
               +-----------------------+
       </text>
     </g>
 
     <!-- Technical Status Telemetry Below ASCII Art -->
     <g class="font-mono" transform="translate(42, 412)">
-      <text x="0" y="16" font-size="11.5" fill="#8B949E">&gt; STATUS :</text>
-      <text x="75" y="16" font-size="11.5" fill="#F0F6FC">ALL DEEP LEARNING LAYERS ACTIVE</text>
+      <text x="0" y="16" font-size="11.5" fill="#94A3B8">&gt; STATUS :</text>
+      <text x="75" y="16" font-size="11.5" fill="#50FA7B">ALL DEEP LEARNING LAYERS ACTIVE</text>
 
-      <text x="0" y="36" font-size="11.5" fill="#8B949E">&gt; MODEL  :</text>
-      <text x="75" y="36" font-size="11.5" fill="#C9D1D9">PYTORCH INFERENCE &amp; FEATURE PIPELINES</text>
+      <text x="0" y="36" font-size="11.5" fill="#94A3B8">&gt; MODEL  :</text>
+      <text x="75" y="36" font-size="11.5" fill="#E2E8F0">PYTORCH INFERENCE &amp; FEATURE PIPELINES</text>
 
-      <text x="0" y="56" font-size="11.5" fill="#8B949E">&gt; RETRIEV:</text>
-      <text x="75" y="56" font-size="11.5" fill="#C9D1D9">HYBRID BM25 + DENSE EMBEDDING RAG</text>
+      <text x="0" y="56" font-size="11.5" fill="#94A3B8">&gt; RETRIEV:</text>
+      <text x="75" y="56" font-size="11.5" fill="#E2E8F0">HYBRID BM25 + DENSE EMBEDDING RAG</text>
 
-      <text x="0" y="76" font-size="11.5" fill="#8B949E">&gt; ORCH   :</text>
-      <text x="75" y="76" font-size="11.5" fill="#C9D1D9">MODEL CONTEXT PROTOCOL (MCP)</text>
+      <text x="0" y="76" font-size="11.5" fill="#94A3B8">&gt; ORCH   :</text>
+      <text x="75" y="76" font-size="11.5" fill="#E2E8F0">MODEL CONTEXT PROTOCOL (MCP)</text>
 
       <!-- Blinking Cursor -->
-      <text x="0" y="106" font-size="11.5" fill="#8B949E">[READY_FOR_ENGINEERING_REVIEW]</text>
-      <rect x="225" y="96" width="7" height="12" fill="#C9D1D9">
+      <text x="0" y="106" font-size="11.5" fill="#94A3B8">[READY_FOR_ENGINEERING_REVIEW]</text>
+      <rect x="225" y="96" width="7" height="12" fill="#E2E8F0">
         <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
       </rect>
     </g>
@@ -111,13 +116,13 @@
 
     <!-- Top Status Strip -->
     <g transform="translate(488, 48)">
-      <circle cx="6" cy="-4" r="5.5" fill="#C9D1D9" />
-      <text x="22" y="1" class="font-mono" font-size="13.5" font-weight="700" fill="#8B949E" letter-spacing="1.2">VERIFIED PROFILE • AI &amp; ML SYSTEMS ENGINEER</text>
+      <circle cx="6" cy="-4" r="5.5" fill="#10B981" />
+      <text x="22" y="1" class="font-mono" font-size="13.5" font-weight="700" fill="#94A3B8" letter-spacing="1.2">VERIFIED PROFILE • AI &amp; ML SYSTEMS ENGINEER</text>
     </g>
 
-    <!-- Greeting & Solid White Hero Name -->
+    <!-- Greeting & Brand Gradient Hero Name -->
     <g transform="translate(488, 76)">
-      <text x="0" y="18" class="font-mono" font-size="13" font-weight="600" fill="#8B949E">&gt; Hello, World! I am</text>
+      <text x="0" y="18" class="font-mono" font-size="13" font-weight="600" fill="#94A3B8">&gt; Hello, World! I am</text>
       <text x="0" y="56" class="font-sans text-title">PRANJAL H. DOHARE</text>
     </g>
 
@@ -125,25 +130,25 @@
     <g transform="translate(488, 154)" class="font-mono">
       <g opacity="1">
         <animate attributeName="opacity" values="1;1;0;0;0;0;1" keyTimes="0;0.31;0.33;0.64;0.66;0.98;1" dur="9s" repeatCount="indefinite" />
-        <text x="0" y="0" font-size="15" font-weight="700" fill="#8B949E">&gt; Role: </text>
+        <text x="0" y="0" font-size="15" font-weight="700" fill="#94A3B8">&gt; Role: </text>
         <text x="68" y="0" font-size="15" font-weight="700" fill="#F0F6FC">AI &amp; ML Engineer</text>
-        <rect x="220" y="-12" width="8" height="15" fill="#C9D1D9">
+        <rect x="220" y="-12" width="8" height="15" fill="#E2E8F0">
           <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite" />
         </rect>
       </g>
       <g opacity="0">
         <animate attributeName="opacity" values="0;0;1;1;0;0;0" keyTimes="0;0.31;0.33;0.64;0.66;0.98;1" dur="9s" repeatCount="indefinite" />
-        <text x="0" y="0" font-size="15" font-weight="700" fill="#8B949E">&gt; Role: </text>
+        <text x="0" y="0" font-size="15" font-weight="700" fill="#94A3B8">&gt; Role: </text>
         <text x="68" y="0" font-size="15" font-weight="700" fill="#F0F6FC">Deep Learning &amp; Applied Systems Engineer</text>
-        <rect x="438" y="-12" width="8" height="15" fill="#C9D1D9">
+        <rect x="438" y="-12" width="8" height="15" fill="#E2E8F0">
           <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite" />
         </rect>
       </g>
       <g opacity="0">
         <animate attributeName="opacity" values="0;0;0;0;1;1;0" keyTimes="0;0.31;0.33;0.64;0.66;0.98;1" dur="9s" repeatCount="indefinite" />
-        <text x="0" y="0" font-size="15" font-weight="700" fill="#8B949E">&gt; Role: </text>
+        <text x="0" y="0" font-size="15" font-weight="700" fill="#94A3B8">&gt; Role: </text>
         <text x="68" y="0" font-size="15" font-weight="700" fill="#F0F6FC">RAG &amp; High-Performance ML Architect</text>
-        <rect x="392" y="-12" width="8" height="15" fill="#C9D1D9">
+        <rect x="392" y="-12" width="8" height="15" fill="#E2E8F0">
           <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite" />
         </rect>
       </g>
@@ -204,7 +209,7 @@
       </a>
     </g>
 
-    <!-- ================= SLEEK MONOCHROME BADGES (LangChain, LangGraph, Docker removed) ================= -->
+    <!-- ================= SLEEK NEUTRAL BADGES ================= -->
     <g transform="translate(488, 408)">
       <text x="0" y="0" class="font-sans text-heading">TECHNICAL STACK &amp; CORE COMPETENCIES</text>
 
@@ -213,14 +218,14 @@
         <!-- Python -->
         <g transform="translate(0, 0)">
           <rect x="0" y="0" width="86" height="28" rx="5" fill="#1F242D" stroke="#30363D" stroke-width="1.2" />
-          <circle cx="15" cy="14" r="5" fill="#8B949E" />
+          <circle cx="15" cy="14" r="5" fill="#94A3B8" />
           <text x="48" y="18" class="text-pill" text-anchor="middle">Python</text>
         </g>
 
         <!-- PyTorch -->
         <g transform="translate(94, 0)">
           <rect x="0" y="0" width="92" height="28" rx="5" fill="#1F242D" stroke="#30363D" stroke-width="1.2" />
-          <circle cx="16" cy="14" r="5" fill="#C9D1D9" opacity="0.9" />
+          <circle cx="16" cy="14" r="5" fill="#94A3B8" opacity="0.9" />
           <circle cx="16" cy="14" r="2.5" fill="#1F242D" />
           <text x="52" y="18" class="text-pill" text-anchor="middle">PyTorch</text>
         </g>
@@ -228,7 +233,7 @@
         <!-- FastAPI -->
         <g transform="translate(194, 0)">
           <rect x="0" y="0" width="88" height="28" rx="5" fill="#1F242D" stroke="#30363D" stroke-width="1.2" />
-          <circle cx="16" cy="14" r="5.5" fill="#8B949E" />
+          <circle cx="16" cy="14" r="5.5" fill="#94A3B8" />
           <polygon points="17,10 13.5,14.5 16,14.5 15,18 18.5,13.5 16,13.5" fill="#1F242D" />
           <text x="50" y="18" class="text-pill" text-anchor="middle">FastAPI</text>
         </g>
@@ -248,9 +253,9 @@
 
       <!-- Pill Grid Row 2 -->
       <g transform="translate(0, 52)" class="font-sans">
-        <!-- MCP -->
+        <!-- MCP (Standout Primary Skill with Brand Gradient Border) -->
         <g transform="translate(0, 0)">
-          <rect x="0" y="0" width="60" height="28" rx="5" fill="#1F242D" stroke="#6E7681" stroke-width="1.3" />
+          <rect x="0" y="0" width="60" height="28" rx="5" fill="#1F242D" stroke="url(#brand-gradient)" stroke-width="1.5" />
           <text x="30" y="18" class="text-pill" text-anchor="middle">MCP</text>
         </g>
 
@@ -275,7 +280,7 @@
         <!-- PostgreSQL -->
         <g transform="translate(252, 0)">
           <rect x="0" y="0" width="106" height="28" rx="5" fill="#1F242D" stroke="#30363D" stroke-width="1.2" />
-          <circle cx="15" cy="14" r="4.5" fill="#8B949E" opacity="0.9" />
+          <circle cx="15" cy="14" r="4.5" fill="#94A3B8" opacity="0.9" />
           <text x="58" y="18" class="text-pill" text-anchor="middle">PostgreSQL</text>
         </g>
       </g>
@@ -283,8 +288,8 @@
 
     <!-- ================= STATUS FOOTER ================= -->
     <g transform="translate(488, 535)" class="font-mono">
-      <circle cx="6" cy="-4" r="4.5" fill="#C9D1D9" />
-      <text x="20" y="0" font-size="11.5" font-weight="700" fill="#8B949E" letter-spacing="1">STATUS : OPEN FOR AI/ML INTERNSHIPS, PART-TIME &amp; RESEARCH COLLABORATIONS</text>
+      <circle cx="6" cy="-4" r="4.5" fill="#10B981" />
+      <text x="20" y="0" font-size="11.5" font-weight="700" fill="#94A3B8" letter-spacing="1">STATUS : OPEN FOR AI/ML INTERNSHIPS, PART-TIME &amp; RESEARCH COLLABORATIONS</text>
     </g>
   </g>
 </svg>

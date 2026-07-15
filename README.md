@@ -8,9 +8,9 @@
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pranjal-dohare-892b262a6/)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Pranjal1342)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pranjaldohare8@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-1F242D?style=for-the-badge&logo=linkedin&logoColor=38BDF8)](https://www.linkedin.com/in/pranjal-dohare-892b262a6/)
+[![GitHub](https://img.shields.io/badge/GitHub-1F242D?style=for-the-badge&logo=github&logoColor=38BDF8)](https://github.com/Pranjal1342)
+[![Email](https://img.shields.io/badge/Email-1F242D?style=for-the-badge&logo=gmail&logoColor=38BDF8)](mailto:pranjaldohare8@gmail.com)
 
 </div>
 
@@ -26,7 +26,7 @@
 | :--- | :--- | :--- | :--- |
 | **100K Profiles in ~3.5s** | Offline Candidate Discovery & Ranking Pipeline | BM25 Retrieval + LightGBM LambdaRank + Gemma3 Pairwise Judgments | [View Repo](https://github.com/Pranjal1342/Intelligent-Candidate-Discovery-Ranking-System) |
 | **SRE OpenEnv (RL)** | Autonomous SRE Incident Remediation | Reinforcement Learning Environment + LoRA Fine-Tuned Qwen2.5 | [View Repo](https://github.com/Pranjal1342/agentic-sre-openenv) |
-| **IEEE CIS x MSRIT '26** | MSME Payment Compliance Orchestration | Multi-Agent Model Context Protocol (MCP) Hackathon System | [*Active Build*](https://github.com/Pranjal1342) |
+| **Document & Land Verification** | Historical Document Verification & Land Record Digitization | GLM-OCR + Layout-Aware Hierarchical RAG + Gemini Agent Reasoning | [View Repo](https://github.com/Pranjal1342/SthirLabs) |
 
 ---
 
@@ -42,6 +42,12 @@
 > **Reinforcement Learning environment for autonomous Site Reliability Engineering (SRE) incident remediation.**
 - **Capabilities**: Simulates DB lock contention, OOMKill cascades, network latency spikes, and telemetry collapse scenarios.
 - **Agent Training**: Fine-tuned **Qwen2.5** via LoRA for multi-turn root cause diagnosis and infrastructure remediation under strict error budgets.
+
+### 3. [SthirLabs](https://github.com/Pranjal1342/SthirLabs)
+> **AI-powered historical document verification and land record digitization hub.**
+- **OCR & Extraction**: Uses **GLM-OCR** for high-accuracy character recognition across historical and complex document layouts.
+- **Hierarchical RAG**: Layout-aware hierarchical retrieval-augmented generation for structured land record analysis and cross-verification.
+- **Agent Reasoning**: Powered by **Gemini agent reasoning** and built on a high-performance **Next.js** frontend with a **Go backend**.
 
 ---
 
