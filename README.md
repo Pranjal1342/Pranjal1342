@@ -1,8 +1,8 @@
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="dark.svg?v=2.8">
-    <source media="(prefers-color-scheme: light)" srcset="light.svg?v=2.8">
-    <img alt="Pranjal H. Dohare — AI &amp; ML Engineer | Agentic AI &amp; MCP Systems Architect" src="dark.svg?v=2.8" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Pranjal1342/Pranjal1342/main/dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Pranjal1342/Pranjal1342/main/light.svg">
+    <img alt="Pranjal H. Dohare — AI &amp; ML Engineer | Agentic AI &amp; MCP Systems Architect" src="https://raw.githubusercontent.com/Pranjal1342/Pranjal1342/main/dark.svg" width="100%">
   </picture>
 </div>
 
@@ -62,8 +62,8 @@
 ## GitHub Analytics & Contributions
 
 <div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Pranjal1342&theme=dracula" height="175" alt="GitHub Stats" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Pranjal1342&theme=dracula" height="175" alt="Top Languages" />
+  <img src="https://github-readme-stats-fast.vercel.app/api?username=Pranjal1342&show_icons=true&theme=dracula" height="175" alt="GitHub Stats" />
+  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=Pranjal1342&layout=compact&theme=dracula" height="175" alt="Top Languages" />
 </div>
 
 <br />
