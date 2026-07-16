@@ -195,7 +195,7 @@
       <text x="75" y="0" class="text-info-val">India</text>
 
       <text x="216" y="0" class="text-info-label">Education:</text>
-      <text x="295" y="0" class="text-info-val">B.Tech Computer Science (AI/ML Undergrad)</text>
+      <text x="295" y="0" class="text-info-val">B.E. in AI/ML</text>
 
       <text x="0" y="30" class="text-info-label">Focus:</text>
       <text x="75" y="30" class="text-info-val">Deep Learning, Machine Learning, Agentic AI Workflows &amp; RAG Systems</text>
