@@ -246,8 +246,14 @@
           <text x="37" y="18" class="text-pill" text-anchor="middle">Flask</text>
         </g>
 
-        <!-- RAG -->
+        <!-- LLMs -->
         <g transform="translate(372, 0)">
+          <rect x="0" y="0" width="66" height="28" rx="5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" />
+          <text x="33" y="18" class="text-pill" text-anchor="middle">LLMs</text>
+        </g>
+
+        <!-- RAG -->
+        <g transform="translate(446, 0)">
           <rect x="0" y="0" width="56" height="28" rx="5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" />
           <text x="28" y="18" class="text-pill" text-anchor="middle">RAG</text>
         </g>
@@ -257,7 +263,7 @@
       <g transform="translate(0, 52)" class="font-sans">
         <!-- MCP -->
         <g transform="translate(0, 0)">
-          <rect x="0" y="0" width="60" height="28" rx="5" fill="#FFFFFF" stroke="url(#brand-gradient)" stroke-width="1.5" />
+          <rect x="0" y="0" width="60" height="28" rx="5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" />
           <text x="30" y="18" class="text-pill" text-anchor="middle">MCP</text>
         </g>
 
