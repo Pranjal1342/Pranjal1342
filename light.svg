@@ -180,10 +180,12 @@
 
       <!-- Card 3 -->
       <g transform="translate(432, 14)">
-        <rect x="0" y="0" width="204" height="78" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.3" />
-        <text x="14" y="26" class="font-mono text-metric">IEEE CIS '26</text>
-        <text x="14" y="47" class="font-sans text-metric-sub">MSME Payment Compliance</text>
-        <text x="14" y="65" class="font-sans text-metric-desc">MCP Orchestration Build</text>
+        <a xlink:href="https://github.com/Pranjal1342/SthirLabs" target="_blank">
+          <rect x="0" y="0" width="204" height="78" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.3" />
+          <text x="14" y="26" class="font-mono text-metric">SthirLabs</text>
+          <text x="14" y="47" class="font-sans text-metric-sub">Land &amp; Doc Digitization</text>
+          <text x="14" y="65" class="font-sans text-metric-desc">GLM-OCR + Hierarchical RAG</text>
+        </a>
       </g>
     </g>
 
