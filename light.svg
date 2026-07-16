@@ -8,9 +8,9 @@
     <style>
       .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
       .font-mono { font-family: 'SF Mono', SFMono-Regular, ui-monospace, Menlo, Consolas, monospace; }
-      .text-title { font-size: 34px; font-weight: 800; letter-spacing: -0.5px; fill: url(#brand-gradient); }
+      .text-title { font-size: 34px; font-weight: 800; letter-spacing: -0.5px; fill: #0F172A; }
       .text-heading { font-size: 12.5px; font-weight: 700; letter-spacing: 1.5px; fill: #64748B; text-transform: uppercase; }
-      .text-metric { font-size: 21px; font-weight: 800; fill: url(#brand-gradient); }
+      .text-metric { font-size: 21px; font-weight: 800; fill: #2563EB; }
       .text-metric-sub { font-size: 12px; font-weight: 600; fill: #0F172A; }
       .text-metric-desc { font-size: 11px; font-weight: 500; fill: #64748B; }
       .text-info-label { font-size: 13px; font-weight: 600; fill: #64748B; }
