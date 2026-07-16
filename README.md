@@ -1,8 +1,8 @@
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Pranjal1342/Pranjal1342/main/dark.svg?v=be-aiml">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Pranjal1342/Pranjal1342/main/light.svg?v=be-aiml">
-    <img alt="Pranjal H. Dohare — AI &amp; ML Engineer | Agentic AI &amp; MCP Systems Architect" src="https://raw.githubusercontent.com/Pranjal1342/Pranjal1342/main/dark.svg?v=be-aiml" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Pranjal1342/Pranjal1342/8cb768a4bf121d3904787b18e2247d7cbf38fed1/dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Pranjal1342/Pranjal1342/8cb768a4bf121d3904787b18e2247d7cbf38fed1/light.svg">
+    <img alt="Pranjal H. Dohare — AI &amp; ML Engineer | Agentic AI &amp; MCP Systems Architect" src="https://raw.githubusercontent.com/Pranjal1342/Pranjal1342/8cb768a4bf121d3904787b18e2247d7cbf38fed1/dark.svg" width="100%">
   </picture>
 </div>
 
