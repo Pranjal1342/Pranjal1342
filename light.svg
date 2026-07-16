@@ -232,28 +232,26 @@
           <text x="52" y="18" class="text-pill" text-anchor="middle">PyTorch</text>
         </g>
 
-        <!-- FastAPI -->
+        <!-- Machine Learning -->
         <g transform="translate(194, 0)">
-          <rect x="0" y="0" width="88" height="28" rx="5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" />
-          <circle cx="16" cy="14" r="5.5" fill="#64748B" />
-          <polygon points="17,10 13.5,14.5 16,14.5 15,18 18.5,13.5 16,13.5" fill="#FFFFFF" />
-          <text x="50" y="18" class="text-pill" text-anchor="middle">FastAPI</text>
+          <rect x="0" y="0" width="138" height="28" rx="5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" />
+          <text x="69" y="18" class="text-pill" text-anchor="middle">Machine Learning</text>
         </g>
 
-        <!-- Flask -->
-        <g transform="translate(290, 0)">
-          <rect x="0" y="0" width="74" height="28" rx="5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" />
-          <text x="37" y="18" class="text-pill" text-anchor="middle">Flask</text>
+        <!-- Deep Learning -->
+        <g transform="translate(340, 0)">
+          <rect x="0" y="0" width="120" height="28" rx="5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" />
+          <text x="60" y="18" class="text-pill" text-anchor="middle">Deep Learning</text>
         </g>
 
         <!-- LLMs -->
-        <g transform="translate(372, 0)">
+        <g transform="translate(468, 0)">
           <rect x="0" y="0" width="66" height="28" rx="5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" />
           <text x="33" y="18" class="text-pill" text-anchor="middle">LLMs</text>
         </g>
 
         <!-- RAG -->
-        <g transform="translate(446, 0)">
+        <g transform="translate(542, 0)">
           <rect x="0" y="0" width="56" height="28" rx="5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" />
           <text x="28" y="18" class="text-pill" text-anchor="middle">RAG</text>
         </g>
@@ -267,26 +265,28 @@
           <text x="30" y="18" class="text-pill" text-anchor="middle">MCP</text>
         </g>
 
-        <!-- DL -->
+        <!-- FastAPI -->
         <g transform="translate(68, 0)">
-          <rect x="0" y="0" width="52" height="28" rx="5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" />
-          <text x="26" y="18" class="text-pill" text-anchor="middle">DL</text>
+          <rect x="0" y="0" width="88" height="28" rx="5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" />
+          <circle cx="16" cy="14" r="5.5" fill="#64748B" />
+          <polygon points="17,10 13.5,14.5 16,14.5 15,18 18.5,13.5 16,13.5" fill="#FFFFFF" />
+          <text x="50" y="18" class="text-pill" text-anchor="middle">FastAPI</text>
         </g>
 
-        <!-- ML -->
-        <g transform="translate(128, 0)">
-          <rect x="0" y="0" width="52" height="28" rx="5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" />
-          <text x="26" y="18" class="text-pill" text-anchor="middle">ML</text>
+        <!-- Flask -->
+        <g transform="translate(164, 0)">
+          <rect x="0" y="0" width="74" height="28" rx="5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" />
+          <text x="37" y="18" class="text-pill" text-anchor="middle">Flask</text>
         </g>
 
         <!-- SQL -->
-        <g transform="translate(188, 0)">
+        <g transform="translate(246, 0)">
           <rect x="0" y="0" width="56" height="28" rx="5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" />
           <text x="28" y="18" class="text-pill" text-anchor="middle">SQL</text>
         </g>
 
         <!-- PostgreSQL -->
-        <g transform="translate(252, 0)">
+        <g transform="translate(310, 0)">
           <rect x="0" y="0" width="106" height="28" rx="5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" />
           <circle cx="15" cy="14" r="4.5" fill="#64748B" opacity="0.9" />
           <text x="58" y="18" class="text-pill" text-anchor="middle">PostgreSQL</text>
