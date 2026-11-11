@@ -267,7 +267,8 @@ def card(items, label, text_max_x=W - X0):
 """
 
 
-ABOUT = "I'm focused on deep learning research and applied ML. I also work on LLMs, RAG, MCP and agentic AI systems."
+ABOUT = ("I train neural networks, deep learning models and reinforcement learning agents that act on their own. "
+         "I'm focused on deep learning research and applied ML. I also work on LLMs, RAG, MCP and agentic AI systems.")
 SRE = ("Agentic SRE OpenEnv",
        "A reinforcement learning environment that drops agents into simulated production incidents and scores their "
        "response the way an on-call rotation would judge a human.",
@@ -279,7 +280,6 @@ ORAL = ("Tri-Branch Fusion CNN: Oral Cancer Screening",
         "It fuses three branches (a WLI RGB CNN, an AFI grayscale CNN and a metadata MLP) and targets sub-200 ms INT8 "
         "TFLite inference on an ESP32-S3.")
 BLUE, TEAL, VIOLET, ROSE, CLAY = "#7c9fd0", "#6fae98", "#a08ed4", "#c98088", "#b07a52"
-ABOUT_HIGHLIGHTS = [("deep learning research", CLAY), ("applied ML", CLAY)]
 SKILL_ROWS = [(BLUE, ["Deep Learning", "Machine Learning", "LLMs", "RAG", "MCP", "Agentic AI"]), (TEAL, ["Python", "Java"])]
 CONTACTS = [("email", "Email"), ("github", "GitHub"), ("linkedin", "LinkedIn"), ("x", "X"), ("portfolio", "Portfolio")]
 
@@ -295,7 +295,7 @@ def project(title, metric, desc, metric_colour, heading=()):
 
 def cards():
     return {
-        "about.svg": card([*kicker("ABOUT"), ("text", ABOUT, 2.6, INK, 0, ABOUT_HIGHLIGHTS)], f"About. {ABOUT}"),
+        "about.svg": card([*kicker("ABOUT"), ("text", ABOUT, 2.6, INK, 0)], f"About. {ABOUT}"),
         "project-sre.svg": card(project(*SRE, VIOLET, heading=kicker("PROJECTS")), "Projects. " + " ".join(SRE)),
         "project-oral.svg": card(project(*ORAL, ROSE), " ".join(ORAL)),
         "skills.svg": card([*kicker("SKILLS"), *(("words", row, 2.6, c, 48) for c, row in SKILL_ROWS)],

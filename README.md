@@ -1,6 +1,6 @@
 <img src="hero.svg" alt="Pranjal H Dohare. AI/ML engineer working across deep learning, LLMs, RAG and agentic AI. Quote: “The complexity and magnitude of both today’s opportunities and challenges demand the collaborative efforts of the world’s very best researchers.” — Geoffrey Hinton." width="100%">
 
-<img src="about.svg" alt="About. I'm focused on deep learning research and applied ML. I also work on LLMs, RAG, MCP and agentic AI systems." width="100%">
+<img src="about.svg" alt="About. I train neural networks, deep learning models and reinforcement learning agents that act on their own. I'm focused on deep learning research and applied ML. I also work on LLMs, RAG, MCP and agentic AI systems." width="100%">
 
 <img src="project-sre.svg" alt="Projects. Agentic SRE OpenEnv. A reinforcement learning environment that drops agents into simulated production incidents and scores their response the way an on-call rotation would judge a human. The policy model is GLM-5.2 (open-weight). It uses hybrid memory (pgvector plus a Postgres causal graph), tools wrapped in MCP, and a ToRA-style planning loop." width="100%">
 
