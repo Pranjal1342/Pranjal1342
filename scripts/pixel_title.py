@@ -1,4 +1,4 @@
-"""Generate hero.svg: every text line drawn as flat pixel blocks (one <rect> per lit pixel).
+"""Generate hero.svg and the README section cards: every text line drawn as flat pixel blocks (one <rect> per lit pixel).
 
 Real geometry, not fonts, because GitHub's image proxy blocks web fonts in SVGs.
 Glyphs are a hand-drawn 5x7 grid (lowercase descenders use two extra rows): Pillow's built-in
@@ -13,6 +13,29 @@ FILL_RATIO = 7 / 8
 
 G = {
     "A": [".###.", "#...#", "#...#", "#####", "#...#", "#...#", "#...#"],
+    "B": ["####.", "#...#", "#...#", "####.", "#...#", "#...#", "####."],
+    "K": ["#...#", "#..#.", "#.#..", "##...", "#.#..", "#..#.", "#...#"],
+    "V": ["#...#", "#...#", "#...#", "#...#", "#...#", ".#.#.", "..#.."],
+    "W": ["#...#", "#...#", "#...#", "#.#.#", "#.#.#", "##.##", "#...#"],
+    "X": ["#...#", "#...#", ".#.#.", "..#..", ".#.#.", "#...#", "#...#"],
+    "Y": ["#...#", "#...#", ".#.#.", "..#..", "..#..", "..#..", "..#.."],
+    "j": ["..#", "...", ".##", "..#", "..#", "..#", "..#", "#.#", ".#."],
+    "k": ["#....", "#....", "#..#.", "#.#..", "##...", "#.#..", "#..#."],
+    "-": ["...", "...", "...", "###", "...", "...", "..."],
+    "'": ["#", "#", ".", ".", ".", ".", "."],
+    "(": ["..#", ".#.", "#..", "#..", "#..", ".#.", "..#"],
+    ")": ["#..", ".#.", "..#", "..#", "..#", ".#.", "#.."],
+    "%": ["##...", "##..#", "...#.", "..#..", ".#...", "#..##", "...##"],
+    "0": [".###.", "#...#", "#..##", "#.#.#", "##..#", "#...#", ".###."],
+    "1": ["..#..", ".##..", "..#..", "..#..", "..#..", "..#..", ".###."],
+    "2": [".###.", "#...#", "....#", "...#.", "..#..", ".#...", "#####"],
+    "3": ["####.", "....#", "....#", ".###.", "....#", "....#", "####."],
+    "4": ["...#.", "..##.", ".#.#.", "#..#.", "#####", "...#.", "...#."],
+    "5": ["#####", "#....", "####.", "....#", "....#", "#...#", ".###."],
+    "6": [".###.", "#....", "#....", "####.", "#...#", "#...#", ".###."],
+    "7": ["#####", "....#", "...#.", "..#..", ".#...", ".#...", ".#..."],
+    "8": [".###.", "#...#", "#...#", ".###.", "#...#", "#...#", ".###."],
+    "9": [".###.", "#...#", "#...#", ".####", "....#", "....#", ".###."],
     "C": [".###.", "#...#", "#....", "#....", "#....", "#...#", ".###."],
     "D": ["####.", "#...#", "#...#", "#...#", "#...#", "#...#", "####."],
     "E": ["#####", "#....", "#....", "####.", "#....", "#....", "#####"],
@@ -77,8 +100,8 @@ QUOTE_X, QUOTE_TOP, QUOTE_PITCH, QUOTE_LEADING, QUOTE_MAX_X = 64, 234, 2.0, 26, 
 G[" "] = G[" "]  # non-breaking space keeps the attribution on one line
 
 
-def wrap(text, max_cols):
-    width = lambda t: sum(len(G[ch][0]) + 1 for ch in t) - 1
+def wrap(text, max_cols, tracking=0):
+    width = lambda t: sum(len(G[ch][0]) + 1 + tracking for ch in t) - 1 - tracking
     lines = [""]
     for word in text.split(" "):
         trial = f"{lines[-1]} {word}".strip()
@@ -168,8 +191,7 @@ def build():
 """, boxes
 
 
-# 9x9 pixel icons for the README contact list, same block convention as the banner text.
-ICON_PITCH, ICON_COLOUR = 2, "#8d98a8"
+# 9x9 pixel icons for the contact card, same block convention as the text.
 ICONS = {
     "email":     [".........", "#########", "##.....##", "#.#...#.#", "#..#.#..#", "#...#...#", "#.......#", "#########", "........."],
     "github":    [".##...##.", ".###.###.", ".#######.", "#########", "##.###.##", "#########", ".#######.", "..##.##..", "..#...#.."],
@@ -178,55 +200,112 @@ ICONS = {
     "portfolio": ["..#####..", ".#..#..#.", "#..#.#..#", "#########", "#..#.#..#", "#..#.#..#", "#########", ".#..#..#.", "..#####.."],
 }
 
+# Section cards: same canvas, glyphs and block rule as the banner, so the whole README reads as one system.
+X0, MARGIN, LEAD = 64, 36, 12  # LEAD: line advance in grid rows (7 caps + 2 descender + 3 air)
+INK, MUTED, SLATE = "#dfe4ea", "#8d98a8", "#6b7f99"
+BLUE, TEAL, VIOLET, ROSE, CLAY = "#7c9fd0", "#6fae98", "#a08ed4", "#c98088", "#b07a52"
 
-def icon_svg(rows):
-    n, b = len(rows) * ICON_PITCH, ICON_PITCH * FILL_RATIO
-    rects = "".join(f'<rect x="{x * ICON_PITCH}" y="{y * ICON_PITCH}" width="{b:g}" height="{b:g}"/>'
+
+def icon(rows, x0, top, pitch, colour):
+    b = round(pitch * FILL_RATIO, 2)
+    rects = "".join(f'<rect x="{x0 + x * pitch:g}" y="{top + y * pitch:g}" width="{b:g}" height="{b:g}"/>'
                     for y, row in enumerate(rows) for x, c in enumerate(row) if c == "#")
-    return f'<svg xmlns="http://www.w3.org/2000/svg" width="{n}" height="{n}" viewBox="0 0 {n} {n}"><g fill="{ICON_COLOUR}">{rects}</g></svg>\n'
+    return f'  <g fill="{colour}">{rects}</g>', x0 + len(rows[0]) * pitch
 
 
-# skills.svg: one row of flat pills per group, one tint per row. Mono labels so widths are predictable (~0.6em per char).
-SKILL_ROWS = [
-    ("#7c9fd0", ["Deep Learning", "Machine Learning", "LLMs", "RAG", "MCP", "Agentic AI"]),
-    ("#6fae98", ["Python", "Java", "Flask", "FastAPI"]),
-    ("#a08ed4", ["HTML", "CSS", "JavaScript", "React"]),
-]
-PILL_FONT, PILL_H, PILL_PAD, PILL_GAP, ROW_GAP, SK_X0, SK_Y0 = 18, 40, 22, 16, 26, 64, 36
-
-
-def skills_svg():
-    mono = "'IBM Plex Mono', Consolas, 'SF Mono', Menlo, monospace"
-    out, y = [], SK_Y0
-    for tint, names in SKILL_ROWS:
-        x = SK_X0
-        for name in names:
-            w = round(len(name) * PILL_FONT * 0.6 + 2 * PILL_PAD)
-            out.append(f'  <rect x="{x + 0.5}" y="{y + 0.5}" width="{w - 1}" height="{PILL_H - 1}" rx="15" '
-                       f'fill="{tint}" fill-opacity="0.18" stroke="{tint}"/>')
-            out.append(f'  <text x="{x + w / 2:g}" y="{y + PILL_H / 2:g}" text-anchor="middle" dominant-baseline="central">{name}</text>')
-            x += w + PILL_GAP
-        assert x - PILL_GAP <= W - SK_X0, (names, x)  # self-check: row fits the 1200px canvas
-        y += PILL_H + ROW_GAP
-    h = y - ROW_GAP + SK_Y0
-    label = "; ".join(", ".join(n) for _, n in SKILL_ROWS)
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{h}" viewBox="0 0 {W} {h}" role="img" aria-label="Skills: {label}">
-  <!-- Generated by scripts/pixel_title.py. -->
+def card(items, label, extra="", text_max_x=W - X0):
+    """items: ("text", str, pitch, colour, tracking) wrapped at text_max_x; ("words", [str], pitch, colour, gap);
+    ("contacts", [(icon, label)], pitch, gap); ("gap", px)."""
+    out, y = [], MARGIN
+    for kind, *a in items:
+        if kind == "gap":
+            y += a[0]
+            continue
+        if kind == "text":
+            text, pitch, colour, tracking = a
+            for t in wrap(text, int((text_max_x - X0) / pitch), tracking):
+                svg, box = line(t, X0, y, pitch, colour, tracking)
+                assert box[2] <= text_max_x, (t, box)  # self-check: wrapped text stays left of any icon
+                out.append(svg)
+                y += LEAD * pitch
+            continue
+        x = X0
+        if kind == "words":
+            words, pitch, colour, gap = a
+            for word in words:
+                svg, box = line(word, x, y, pitch, colour, 0)
+                out.append(svg)
+                x = box[2] + gap
+        else:  # contacts: muted pixel icon, then the label in ink
+            pairs, pitch, gap = a
+            for name, text in pairs:
+                svg, x = icon(ICONS[name], x, y - pitch, pitch, MUTED)  # 9-row icon centred on 7-row caps
+                out.append(svg)
+                svg, box = line(text, x + 3 * pitch, y, pitch, INK, 0)
+                out.append(svg)
+                x = box[2] + gap
+        assert x - gap <= W - X0, a  # self-check: row fits the canvas
+        y += LEAD * pitch
+    h = round(y - 2 * pitch + MARGIN)  # drop the last row's trailing air
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{h}" viewBox="0 0 {W} {h}" role="img" aria-label="{label}">
+  <!-- Generated by scripts/pixel_title.py. Dark canvas so the ink text stays readable on GitHub's light theme. -->
   <rect width="{W}" height="{h}" rx="12" fill="#0a0e16"/>
-  <g font-family="{mono}" font-size="{PILL_FONT}" fill="#dfe4ea">
-{chr(10).join(out)}
-  </g>
+{extra}{chr(10).join(out)}
 </svg>
 """
+
+
+def graph(nodes, edges):
+    """Small infographic: tinted pixel-square nodes joined by faint slate lines."""
+    d = "".join(f"M{nodes[a][0]} {nodes[a][1]}L{nodes[b][0]} {nodes[b][1]}" for a, b in edges)
+    squares = "".join(f'<rect x="{x - 4}" y="{y - 4}" width="8" height="8" fill="{c}"/>' for x, y, c in nodes)
+    return f'  <path d="{d}" stroke="{SLATE}" stroke-opacity="0.5" stroke-width="1.5" fill="none"/>\n  <g>{squares}</g>\n'
+
+
+ABOUT = "I'm focused on deep learning research and applied ML. I also work on LLMs, RAG, MCP and agentic AI systems."
+SRE = ("Agentic SRE OpenEnv",
+       "A reinforcement learning environment that drops agents into simulated production incidents and scores their "
+       "response the way an on-call rotation would judge a human.",
+       "The policy model is GLM-5.2 (open-weight). It uses hybrid memory (pgvector plus a Postgres causal graph), "
+       "tools wrapped in MCP, and a ToRA-style planning loop.")
+ORAL = ("Tri-Branch Fusion CNN: Oral Cancer Screening",
+        "Validation accuracy: 72.02%.",
+        "My capstone (BAI685): non-invasive oral cancer screening that pairs autofluorescence imaging (AFI) with edge AI. "
+        "It fuses three branches (a WLI RGB CNN, an AFI grayscale CNN and a metadata MLP) and targets sub-200 ms INT8 "
+        "TFLite inference on an ESP32-S3.")
+SKILL_ROWS = [["Deep Learning", "Machine Learning", "LLMs", "RAG", "MCP", "Agentic AI"], ["Python", "Java"]]
+CONTACTS = [("email", "Email"), ("github", "GitHub"), ("linkedin", "LinkedIn"), ("x", "X"), ("portfolio", "Portfolio")]
+
+
+def kicker(text):
+    return [("text", text, 2.0, SLATE, 1), ("gap", 14)]
+
+
+def project(title, metric, desc, heading=()):
+    return [*heading, ("text", title, 3.6, INK, 0), ("gap", 10), ("text", metric, 2.6, INK, 0), ("gap", 8),
+            ("text", desc, 2.6, MUTED, 0)]
+
+
+def cards():
+    # SRE: agent nodes passing state; Oral: three input branches fused into one output.
+    sre_icon = graph([(1016, 84, BLUE), (1066, 52, TEAL), (1066, 116, TEAL), (1116, 84, VIOLET)], [(0, 1), (0, 2), (1, 3), (2, 3)])
+    oral_icon = graph([(1016, 48, BLUE), (1016, 84, TEAL), (1016, 120, VIOLET), (1072, 84, ROSE), (1124, 84, CLAY)],
+                      [(0, 3), (1, 3), (2, 3), (3, 4)])
+    return {
+        "about.svg": card([*kicker("ABOUT"), ("text", ABOUT, 2.6, INK, 0)], f"About. {ABOUT}"),
+        "project-sre.svg": card(project(*SRE, heading=kicker("PROJECTS")), "Projects. " + " ".join(SRE), sre_icon, 960),
+        "project-oral.svg": card(project(*ORAL), " ".join(ORAL), oral_icon, 960),
+        "skills.svg": card([*kicker("SKILLS"), *(("words", row, 2.6, INK, 48) for row in SKILL_ROWS)],
+                           "Skills: " + ", ".join(n for row in SKILL_ROWS for n in row)),
+        "contact.svg": card([*kicker("CONTACT"), ("contacts", CONTACTS, 2.6, 44)],
+                            "Contact: " + ", ".join(t for _, t in CONTACTS)),
+    }
 
 
 if __name__ == "__main__":
     svg, boxes = build()
     root = Path(__file__).resolve().parent.parent
     (root / "hero.svg").write_text(svg, encoding="utf-8", newline="\n")
-    (root / "skills.svg").write_text(skills_svg(), encoding="utf-8", newline="\n")
-    for name, rows in ICONS.items():
-        assert len(rows) == 9 and all(len(r) == 9 for r in rows), name
-        (root / "assets" / f"icon-{name}.svg").write_text(icon_svg(rows), encoding="utf-8", newline="\n")
-    for (text, *_), (x0, y0, x1, y1) in zip(LINES, boxes):
-        print(f"{text[:24]:<24} x {x0:g}-{x1:g}  y {y0:g}-{y1:g}")
+    for name, body in cards().items():
+        (root / name).write_text(body, encoding="utf-8", newline="\n")
+        print("wrote", name)
