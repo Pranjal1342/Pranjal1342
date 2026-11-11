@@ -1,0 +1,146 @@
+"""Generate hero.svg: every text line drawn as flat pixel blocks (one <rect> per lit pixel).
+
+Real geometry, not fonts, because GitHub's image proxy blocks web fonts in SVGs.
+Glyphs are a hand-drawn 5x7 grid (lowercase descenders use two extra rows): Pillow's built-in
+bitmap font is a 6px serif whose letters touch, which reads as noise.
+One convention for every line: a block is 7/8 of its grid pitch; only the pitch changes per line.
+Run from the repo root: python scripts/pixel_title.py
+"""
+from pathlib import Path
+
+W, H = 1200, 340
+FILL_RATIO = 7 / 8
+
+G = {
+    "A": [".###.", "#...#", "#...#", "#####", "#...#", "#...#", "#...#"],
+    "C": [".###.", "#...#", "#....", "#....", "#....", "#...#", ".###."],
+    "D": ["####.", "#...#", "#...#", "#...#", "#...#", "#...#", "####."],
+    "E": ["#####", "#....", "#....", "####.", "#....", "#....", "#####"],
+    "G": [".###.", "#...#", "#....", "#.###", "#...#", "#...#", ".###."],
+    "H": ["#...#", "#...#", "#...#", "#####", "#...#", "#...#", "#...#"],
+    "I": ["###", ".#.", ".#.", ".#.", ".#.", ".#.", "###"],
+    "J": ["..###", "...#.", "...#.", "...#.", "...#.", "#..#.", ".##.."],
+    "L": ["#....", "#....", "#....", "#....", "#....", "#....", "#####"],
+    "M": ["#...#", "##.##", "#.#.#", "#.#.#", "#...#", "#...#", "#...#"],
+    "N": ["#...#", "##..#", "#.#.#", "#..##", "#...#", "#...#", "#...#"],
+    "O": [".###.", "#...#", "#...#", "#...#", "#...#", "#...#", ".###."],
+    "P": ["####.", "#...#", "#...#", "####.", "#....", "#....", "#...."],
+    "R": ["####.", "#...#", "#...#", "####.", "#.#..", "#..#.", "#...#"],
+    "S": [".####", "#....", "#....", ".###.", "....#", "....#", "####."],
+    "T": ["#####", "..#..", "..#..", "..#..", "..#..", "..#..", "..#.."],
+    "a": [".....", ".....", ".###.", "....#", ".####", "#...#", ".####"],
+    "c": [".....", ".....", ".###.", "#....", "#....", "#...#", ".###."],
+    "d": ["....#", "....#", ".####", "#...#", "#...#", "#...#", ".####"],
+    "e": [".....", ".....", ".###.", "#...#", "#####", "#....", ".###."],
+    "g": [".....", ".....", ".####", "#...#", "#...#", "#...#", ".####", "....#", ".###."],
+    "i": [".#.", "...", "##.", ".#.", ".#.", ".#.", "###"],
+    "l": ["##.", ".#.", ".#.", ".#.", ".#.", ".#.", "###"],
+    "m": [".....", ".....", "##.#.", "#.#.#", "#.#.#", "#.#.#", "#.#.#"],
+    "n": [".....", ".....", "####.", "#...#", "#...#", "#...#", "#...#"],
+    "p": [".....", ".....", "####.", "#...#", "#...#", "#...#", "####.", "#....", "#...."],
+    "r": [".....", ".....", "#.##.", "##..#", "#....", "#....", "#...."],
+    "s": [".....", ".....", ".####", "#....", ".###.", "....#", "####."],
+    "t": [".#...", ".#...", "####.", ".#...", ".#...", ".#..#", "..##."],
+    "y": [".....", ".....", "#...#", "#...#", "#...#", "#...#", ".####", "....#", ".###."],
+    "/": ["....#", "...#.", "...#.", "..#..", ".#...", ".#...", "#...."],
+    "&": [".##..", "#..#.", "#.#..", ".#...", "#.#.#", "#..#.", ".##.#"],
+    ",": ["..", "..", "..", "..", "..", ".#", ".#", "#."],
+    ".": ["..", "..", "..", "..", "..", "##", "##"],
+    " ": ["...", "...", "...", "...", "...", "...", "..."],
+}
+
+# (text, x, top, pitch, colour, extra columns between letters). Pitches are ~15% over the previous
+# rendered sizes; the two small lines are floored at 2px so they stay legible at GitHub's ~0.7x scale.
+LINES = [
+    ("AI / ML ENGINEER", 64, 78, 2.0, "#6b7f99", 1),
+    ("PRANJAL H DOHARE", 64, 114, 9.2, "#dfe4ea", 0),
+    ("Deep learning, LLMs, RAG and agentic AI systems.", 64, 202, 2.6, "#8d98a8", 0),
+    ("OPEN TO ML/AI ENGINEER & RESEARCH INTERN ROLES", 86, 254, 2.0, "#c9a66b", 1),
+]
+DOT = (70, 254 + 7 * 2.0 / 2, 5, "#c9a66b")  # status dot, vertically centred on the status caps
+
+# Background: a sparse, seeded scatter of single blocks on the title's pixel grid, denser toward the right edge.
+SCATTER_N, SCATTER_SEED, SCATTER_OPACITY = 22, 7, 0.2
+TINTS = ["#7c9fd0", "#6fae98", "#a08ed4", "#c98088", "#b07a52"]
+GRID_X0, GRID_Y0, GRID_PITCH = 64, 114, 9.2  # the title's grid, so the scatter lines up with its blocks
+
+
+def scatter(text_boxes, clearance=24, min_gap=3):
+    import random
+    rng = random.Random(SCATTER_SEED)
+    b = round(GRID_PITCH * FILL_RATIO, 2)
+    cells = []
+    while len(cells) < SCATTER_N:
+        # right band (x 930-1170) with sqrt bias toward the edge, plus a thin bottom strip (y 285-310)
+        x = 930 + 240 * rng.random() ** 0.5 if rng.random() < 0.75 else 720 + 450 * rng.random()
+        y = 30 + 280 * rng.random() if x >= 930 else 285 + 25 * rng.random()
+        c = (round((x - GRID_X0) / GRID_PITCH), round((y - GRID_Y0) / GRID_PITCH))
+        x, y = GRID_X0 + c[0] * GRID_PITCH, GRID_Y0 + c[1] * GRID_PITCH
+        if not (24 <= x and x + b <= W - 24 and 24 <= y and y + b <= H - 24):
+            continue  # snapping pushed it into the edge margin
+        if any(x0 - clearance < x + b and x < x1 + clearance and y0 - clearance < y + b and y < y1 + clearance
+               for x0, y0, x1, y1 in text_boxes):
+            continue  # too close to a text line
+        if any(abs(c[0] - d[0]) < min_gap and abs(c[1] - d[1]) < min_gap for d in cells):
+            continue  # keep blocks apart so they never clump into shapes
+        cells.append(c)
+    groups = {t: [] for t in TINTS}
+    for i, (cx, cy) in enumerate(cells):
+        x, y = GRID_X0 + cx * GRID_PITCH, GRID_Y0 + cy * GRID_PITCH
+        groups[TINTS[i % len(TINTS)]].append(f'<rect x="{x:g}" y="{y:g}" width="{b:g}" height="{b:g}"/>')
+    return "\n".join(f'  <g fill="{t}" fill-opacity="{SCATTER_OPACITY}">{"".join(r)}</g>' for t, r in groups.items())
+
+def pixels(text, tracking):
+    col = 0
+    for ch in text:
+        g = G[ch]
+        assert len({len(r) for r in g}) == 1 and len(g) in (7, 8, 9), ch
+        for y, row in enumerate(g):
+            for x, c in enumerate(row):
+                if c == "#":
+                    yield col + x, y
+        col += len(g[0]) + 1 + tracking
+
+
+def line(text, x0, top, pitch, colour, tracking):
+    px = list(pixels(text, tracking))
+    b = round(pitch * FILL_RATIO, 2)
+    rects = "".join(f'<rect x="{x0 + x * pitch:g}" y="{top + y * pitch:g}" width="{b:g}" height="{b:g}"/>' for x, y in px)
+    box = (x0, top, x0 + max(x for x, _ in px) * pitch + b, top + max(y for _, y in px) * pitch + b)
+    return f'  <g fill="{colour}">{rects}</g>', box
+
+
+def build():
+    parts, boxes = [], []
+    for spec in LINES:
+        svg, box = line(*spec)
+        parts.append(svg)
+        boxes.append(box)
+    for x0, y0, x1, y1 in boxes:  # self-check: inside the banner with a margin
+        assert 24 <= x0 and x1 <= W - 24 and 24 <= y0 and y1 <= H - 24, (x0, y0, x1, y1)
+    for a, b in zip(boxes, boxes[1:]):  # and lines stacked without overlap
+        assert a[3] + 8 <= b[1], (a, b)
+    cx, cy, r, c = DOT
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="t d">
+  <title id="t">Pranjal H Dohare</title>
+  <desc id="d">AI/ML engineer working across deep learning, LLMs, RAG and agentic AI. Open to ML/AI engineer and research intern roles.</desc>
+  <!-- Generated by scripts/pixel_title.py. Palette from the portfolio's App.css; text is pixel geometry because web fonts can't load here. -->
+  <rect width="{W}" height="{H}" rx="12" fill="#0a0e16"/>
+  <rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="12" fill="none" stroke="#6b7f99" stroke-opacity="0.3"/>
+  <!-- Background: a sparse scatter of faint pixel blocks, clear of the text. -->
+{scatter(boxes)}
+{parts[0]}
+{parts[1]}
+{parts[2]}
+  <!-- The single accent use: current status. -->
+  <circle cx="{cx:g}" cy="{cy:g}" r="{r}" fill="{c}"/>
+{parts[3]}
+</svg>
+""", boxes
+
+
+if __name__ == "__main__":
+    svg, boxes = build()
+    (Path(__file__).resolve().parent.parent / "hero.svg").write_text(svg, encoding="utf-8", newline="\n")
+    for (text, *_), (x0, y0, x1, y1) in zip(LINES, boxes):
+        print(f"{text[:24]:<24} x {x0:g}-{x1:g}  y {y0:g}-{y1:g}")
