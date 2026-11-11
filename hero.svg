@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="t d">
+  <title id="t">Pranjal H Dohare</title>
+  <desc id="d">AI/ML engineer working across deep learning, LLMs, RAG and agentic AI. Open to ML/AI engineer and research intern roles.</desc>
+  <!-- Palette from the portfolio's App.css. Web fonts can't load inside a GitHub-proxied SVG, so each stack falls back to system fonts. -->
+  <rect width="1200" height="340" rx="12" fill="#0a0e16"/>
+  <rect x="0.5" y="0.5" width="1199" height="339" rx="12" fill="none" stroke="#6b7f99" stroke-opacity="0.3"/>
+
+  <g font-family="'IBM Plex Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="14" letter-spacing="2" fill="#6b7f99">
+    <text x="64" y="104">AI / ML ENGINEER  ·  B.E. AI/ML, VTU</text>
+  </g>
+  <text x="62" y="170" font-family="'IBM Plex Sans', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="56" font-weight="600" fill="#dfe4ea">Pranjal H Dohare</text>
+  <text x="64" y="214" font-family="'IBM Plex Sans', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#8d98a8">Deep learning, LLMs, RAG and agentic AI systems.</text>
+
+  <!-- The single accent use: current status. -->
+  <circle cx="69" cy="263" r="4.5" fill="#c9a66b"/>
+  <text x="84" y="268" font-family="'IBM Plex Mono', Consolas, 'SF Mono', Menlo, monospace" font-size="13" letter-spacing="1.5" fill="#c9a66b">OPEN TO ML/AI ENGINEER &amp; RESEARCH INTERN ROLES</text>
+
+  <!-- Network motif mirroring the portfolio's layer bands: about → skills → projects → resume → contact. -->
+  <g stroke="#6b7f99" stroke-opacity="0.35" stroke-width="1" fill="none">
+    <path d="M735 170L830 70M735 170L830 110M735 170L830 150M735 170L830 190M735 170L830 230M735 170L830 270"/>
+    <path d="M830 70L925 130M830 110L925 130M830 150L925 130M830 190L925 130M830 230L925 130M830 270L925 130"/>
+    <path d="M830 70L925 210M830 110L925 210M830 150L925 210M830 190L925 210M830 230L925 210M830 270L925 210"/>
+    <path d="M925 130L925 210M925 130L1020 170M925 210L1020 170M925 130L1115 170M925 210L1115 170M1020 170L1115 170"/>
+  </g>
+  <circle cx="735" cy="170" r="7" fill="#7c9fd0"/>
+  <g fill="#6fae98">
+    <circle cx="830" cy="70" r="5"/><circle cx="830" cy="110" r="5"/><circle cx="830" cy="150" r="5"/>
+    <circle cx="830" cy="190" r="5"/><circle cx="830" cy="230" r="5"/><circle cx="830" cy="270" r="5"/>
+  </g>
+  <g fill="#a08ed4"><circle cx="925" cy="130" r="6"/><circle cx="925" cy="210" r="6"/></g>
+  <circle cx="1020" cy="170" r="6" fill="#c98088"/>
+  <circle cx="1115" cy="170" r="7" fill="#b07a52"/>
+</svg>
