@@ -8,8 +8,6 @@
 
 <img src="project-oral.svg" alt="Tri-Branch Fusion CNN: Oral Cancer Screening. Validation accuracy: 72.02%. My capstone (BAI685): non-invasive oral cancer screening that pairs autofluorescence imaging (AFI) with edge AI. It fuses three branches (a WLI RGB CNN, an AFI grayscale CNN and a metadata MLP) and targets sub-200 ms INT8 TFLite inference on an ESP32-S3." width="100%">
 
-[Repository](https://github.com/Pranjal1342/Oral_Sense)
-
 <img src="skills.svg" alt="Skills: Deep Learning, Machine Learning, LLMs, RAG, MCP, Agentic AI, Python, Java" width="100%">
 
 ## Recent Activity
