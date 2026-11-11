@@ -198,6 +198,7 @@ ICONS = {
     "linkedin":  [".#######.", "##.######", "#########", "##.#...##", "##.#.#.##", "##.#.#.##", "##.#.#.##", "##.#.#.##", ".#######."],
     "x":         ["##.....##", ".##...##.", "..##.##..", "...###...", "....#....", "...###...", "..##.##..", ".##...##.", "##.....##"],
     "portfolio": ["..#####..", ".#..#..#.", "#..#.#..#", "#########", "#..#.#..#", "#..#.#..#", "#########", ".#..#..#.", "..#####.."],
+    "huggingface": ["..#####..", ".#.....#.", "#.#...#.#", "#.......#", "#.#...#.#", "#..###..#", ".#.....#.", "..#####..", "........."],
 }
 
 # Section cards: same canvas, glyphs and block rule as the banner, so the whole README reads as one system.
@@ -213,8 +214,7 @@ def icon(rows, x0, top, pitch, colour):
 
 
 def card(items, label, text_max_x=W - X0):
-    """items: ("text", str, pitch, colour, tracking) wrapped at text_max_x; ("words", [str], pitch, colour, gap);
-    ("contacts", [(icon, label)], pitch, gap); ("gap", px)."""
+    """items: ("text", str, pitch, colour, tracking) wrapped at text_max_x; ("words", [str], pitch, colour, gap); ("gap", px)."""
     out, y = [], MARGIN
     for kind, *a in items:
         if kind == "gap":
@@ -242,20 +242,11 @@ def card(items, label, text_max_x=W - X0):
                 y += LEAD * pitch
             continue
         x = X0
-        if kind == "words":
-            words, pitch, colour, gap = a
-            for word in words:
-                svg, box = line(word, x, y, pitch, colour, 0)
-                out.append(svg)
-                x = box[2] + gap
-        else:  # contacts: muted pixel icon, then the label in ink
-            pairs, pitch, gap = a
-            for name, text in pairs:
-                svg, x = icon(ICONS[name], x, y - pitch, pitch, MUTED)  # 9-row icon centred on 7-row caps
-                out.append(svg)
-                svg, box = line(text, x + 3 * pitch, y, pitch, INK, 0)
-                out.append(svg)
-                x = box[2] + gap
+        words, pitch, colour, gap = a  # "words"
+        for word in words:
+            svg, box = line(word, x, y, pitch, colour, 0)
+            out.append(svg)
+            x = box[2] + gap
         assert x - gap <= W - X0, a  # self-check: row fits the canvas
         y += LEAD * pitch
     h = round(y - 2 * pitch + MARGIN)  # drop the last row's trailing air
@@ -276,12 +267,35 @@ SRE = ("Agentic SRE OpenEnv",
        "tools wrapped in MCP, and a ToRA-style planning loop.")
 ORAL = ("Tri-Branch Fusion CNN: Oral Cancer Screening",
         "Validation accuracy: 72.02%.",
-        "My capstone (BAI685): non-invasive oral cancer screening that pairs autofluorescence imaging (AFI) with edge AI. "
+        "Non-invasive oral cancer screening that pairs autofluorescence imaging (AFI) with edge AI. "
         "It fuses three branches (a WLI RGB CNN, an AFI grayscale CNN and a metadata MLP) and targets sub-200 ms INT8 "
         "TFLite inference on an ESP32-S3.")
 BLUE, TEAL, VIOLET, ROSE, CLAY = "#7c9fd0", "#6fae98", "#a08ed4", "#c98088", "#b07a52"
 SKILL_ROWS = [(BLUE, ["Deep Learning", "Machine Learning", "LLMs", "RAG", "MCP", "Agentic AI"]), (TEAL, ["Python", "Java"])]
-CONTACTS = [("email", "Email"), ("github", "GitHub"), ("linkedin", "LinkedIn"), ("x", "X"), ("portfolio", "Portfolio")]
+# Clickable link images: one small transparent SVG per link (GitHub can't put several links inside one image).
+# Muted grey for icon and label, because it stays readable on both GitHub's light and dark page backgrounds.
+LINK_TILES = {
+    "icon-email.svg": ("email", "Email"),
+    "icon-github.svg": ("github", "GitHub"),
+    "icon-linkedin.svg": ("linkedin", "LinkedIn"),
+    "icon-x.svg": ("x", "X"),
+    "icon-portfolio.svg": ("portfolio", "Portfolio"),
+    "icon-github-small.svg": ("github", "GitHub"),
+    "icon-huggingface-small.svg": ("huggingface", "Hugging Face"),
+}
+TILE_PITCH, TILE_GAP = 2, 18
+
+
+def tile(icon_name, label):
+    p = TILE_PITCH
+    ic, x = icon(ICONS[icon_name], 0, 0, p, MUTED)
+    txt, box = line(label, x + 3 * p, p, p, MUTED, 0)  # 7-row caps centred on the 9-row icon
+    w, h = round(box[2] + TILE_GAP), round(max(9 * p, box[3]) + 1)
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="{label}">
+{ic}
+{txt}
+</svg>
+"""
 
 
 def kicker(text):
@@ -300,8 +314,8 @@ def cards():
         "project-oral.svg": card(project(*ORAL, ROSE), " ".join(ORAL)),
         "skills.svg": card([*kicker("SKILLS"), *(("words", row, 2.6, c, 48) for c, row in SKILL_ROWS)],
                            "Skills: " + ", ".join(n for _, row in SKILL_ROWS for n in row)),
-        "contact.svg": card([*kicker("CONTACT"), ("contacts", CONTACTS, 2.6, 44)],
-                            "Contact: " + ", ".join(t for _, t in CONTACTS)),
+        "contact.svg": card([("text", "CONTACT", 2.0, SLATE, 1)], "Contact"),
+        **{name: tile(*spec) for name, spec in LINK_TILES.items()},
     }
 
 

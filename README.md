@@ -4,9 +4,10 @@
 
 <img src="project-sre.svg" alt="Projects. Agentic SRE OpenEnv. A reinforcement learning environment that drops agents into simulated production incidents and scores their response the way an on-call rotation would judge a human. The policy model is GLM-5.2 (open-weight). It uses hybrid memory (pgvector plus a Postgres causal graph), tools wrapped in MCP, and a ToRA-style planning loop." width="100%">
 
-[GitHub](https://github.com/Pranjal1342/Agentic_SRE) · [Hugging Face](https://huggingface.co/LordofMonarchs/Agentic_SRE)
+[![GitHub](icon-github-small.svg)](https://github.com/Pranjal1342/Agentic_SRE)
+[![Hugging Face](icon-huggingface-small.svg)](https://huggingface.co/LordofMonarchs/Agentic_SRE)
 
-<img src="project-oral.svg" alt="Tri-Branch Fusion CNN: Oral Cancer Screening. Validation accuracy: 72.02%. My capstone (BAI685): non-invasive oral cancer screening that pairs autofluorescence imaging (AFI) with edge AI. It fuses three branches (a WLI RGB CNN, an AFI grayscale CNN and a metadata MLP) and targets sub-200 ms INT8 TFLite inference on an ESP32-S3." width="100%">
+<img src="project-oral.svg" alt="Tri-Branch Fusion CNN: Oral Cancer Screening. Validation accuracy: 72.02%. Non-invasive oral cancer screening that pairs autofluorescence imaging (AFI) with edge AI. It fuses three branches (a WLI RGB CNN, an AFI grayscale CNN and a metadata MLP) and targets sub-200 ms INT8 TFLite inference on an ESP32-S3." width="100%">
 
 <img src="skills.svg" alt="Skills: Deep Learning, Machine Learning, LLMs, RAG, MCP, Agentic AI, Python, Java" width="100%">
 
@@ -16,10 +17,10 @@
 _Filled in by the Recent Activity workflow._
 <!-- ACTIVITY:END -->
 
-<img src="contact.svg" alt="Contact: Email, GitHub, LinkedIn, X, Portfolio" width="100%">
+<img src="contact.svg" alt="Contact" width="100%">
 
-- Email: [pranjaldohare8@gmail.com](mailto:pranjaldohare8@gmail.com)
-- GitHub: [github.com/Pranjal1342](https://github.com/Pranjal1342)
-- LinkedIn: [linkedin.com/in/pranjal-dohare-892b262a6](https://www.linkedin.com/in/pranjal-dohare-892b262a6/)
-- X: [x.com/PranjalDohare19](https://x.com/PranjalDohare19)
-- Portfolio: [pranjaldohare.vercel.app](https://pranjaldohare.vercel.app/)
+[![Email](icon-email.svg)](mailto:pranjaldohare8@gmail.com)
+[![GitHub](icon-github.svg)](https://github.com/Pranjal1342)
+[![LinkedIn](icon-linkedin.svg)](https://www.linkedin.com/in/pranjal-dohare-892b262a6/)
+[![X](icon-x.svg)](https://x.com/PranjalDohare19)
+[![Portfolio](icon-portfolio.svg)](https://pranjaldohare.vercel.app)
