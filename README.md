@@ -1,11 +1,10 @@
-<img src="hero.svg" alt="Pranjal H Dohare. AI/ML engineer working across deep learning, LLMs, RAG and agentic AI. Open to ML/AI engineer and research intern roles." width="100%">
+<img src="hero.svg" alt="Pranjal H Dohare. AI/ML engineer working across deep learning, LLMs, RAG and agentic AI. Focus: deep learning research and applied ML." width="100%">
 
 <br>
 
 ## About
 
-Final-year undergraduate at Acharya Institute of Technology. I work on LLMs, RAG, MCP, agentic AI systems and applied ML research.
-I'm looking for ML/AI Engineer roles (intern or new grad) and research-adjacent roles such as applied scientist or research intern.
+I'm focused on deep learning research and applied ML. I also work on LLMs, RAG, MCP and agentic AI systems.
 
 <br>
 
@@ -31,14 +30,7 @@ My capstone (BAI685): non-invasive oral cancer screening that pairs autofluoresc
 
 ## Skills
 
-<img src="assets/dot-blue.svg" width="10" height="10" alt=""> **Deep Learning:** CNNs (ResNet/EfficientNet/MobileNet), transfer learning, segmentation/detection, RNN/LSTM, quantization/pruning/distillation, TFLite/ONNX<br>
-<img src="assets/dot-blue.svg" width="10" height="10" alt=""> **Machine Learning:** regression, SVM, decision trees, random forest/XGBoost, clustering, PCA/t-SNE, feature engineering, model evaluation, RL (MDPs, Q-learning, policy gradients)<br>
-<img src="assets/dot-teal.svg" width="10" height="10" alt=""> **LLMs:** transformer internals (self/multi-head attention, positional encoding, encoder-decoder vs. decoder-only), prompting/few-shot, LoRA/PEFT, quantization, batching, KV cache<br>
-<img src="assets/dot-teal.svg" width="10" height="10" alt=""> **RAG:** Graph RAG, semantic search, hybrid agentic + graph RAG<br>
-<img src="assets/dot-violet.svg" width="10" height="10" alt=""> **MCP:** MCP servers (tools/resources), multi-tool orchestration, agent-to-API wiring<br>
-<img src="assets/dot-violet.svg" width="10" height="10" alt=""> **Agentic AI:** agent harnesses, short/long-term memory, tool use, planning loops, RL-trained SRE agent<br>
-<img src="assets/dot-rose.svg" width="10" height="10" alt=""> **Backend:** Python, Java, Flask, FastAPI<br>
-<img src="assets/dot-clay.svg" width="10" height="10" alt=""> **Frontend:** HTML, CSS, JavaScript, React
+<img src="skills.svg" alt="Skills: Deep Learning, Machine Learning, LLMs, RAG, MCP, Agentic AI; Python, Java, Flask, FastAPI; HTML, CSS, JavaScript, React" width="100%">
 
 <br>
 
@@ -52,8 +44,8 @@ _Filled in by the Recent Activity workflow._
 
 ## Contact
 
-- Email: [pranjaldohare8@gmail.com](mailto:pranjaldohare8@gmail.com)
-- GitHub: [github.com/Pranjal1342](https://github.com/Pranjal1342)
-- LinkedIn: [linkedin.com/in/pranjal-dohare-892b262a6](https://www.linkedin.com/in/pranjal-dohare-892b262a6/)
-- X: [x.com/PranjalDohare19](https://x.com/PranjalDohare19)
-- Portfolio: [pranjaldohare.vercel.app](https://pranjaldohare.vercel.app/)
+- <img src="assets/icon-email.svg" width="16" height="16" alt=""> Email: [pranjaldohare8@gmail.com](mailto:pranjaldohare8@gmail.com)
+- <img src="assets/icon-github.svg" width="16" height="16" alt=""> GitHub: [github.com/Pranjal1342](https://github.com/Pranjal1342)
+- <img src="assets/icon-linkedin.svg" width="16" height="16" alt=""> LinkedIn: [linkedin.com/in/pranjal-dohare-892b262a6](https://www.linkedin.com/in/pranjal-dohare-892b262a6/)
+- <img src="assets/icon-x.svg" width="16" height="16" alt=""> X: [x.com/PranjalDohare19](https://x.com/PranjalDohare19)
+- <img src="assets/icon-portfolio.svg" width="16" height="16" alt=""> Portfolio: [pranjaldohare.vercel.app](https://pranjaldohare.vercel.app/)
