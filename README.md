@@ -4,7 +4,7 @@
 
 <img src="project-sre.svg" alt="Projects. Agentic SRE OpenEnv. A reinforcement learning environment that drops agents into simulated production incidents and scores their response the way an on-call rotation would judge a human. The policy model is GLM-5.2 (open-weight). It uses hybrid memory (pgvector plus a Postgres causal graph), tools wrapped in MCP, and a ToRA-style planning loop." width="100%">
 
-[![GitHub](icon-github-small.svg)](https://github.com/Pranjal1342/Agentic_SRE)[![Hugging Face](icon-huggingface-small.svg)](https://huggingface.co/LordofMonarchs/Agentic_SRE)
+[![GitHub](icon-github-small.svg)](https://github.com/Pranjal1342/Agentic_SRE)[![Hugging Face](icon-huggingface-small.svg)](https://huggingface.co/spaces/LordofMonarchs/Agentic_SRE)
 
 <img src="project-oral.svg" alt="Tri-Branch Fusion CNN: Oral Cancer Screening. Validation accuracy: 72.02%. Non-invasive oral cancer screening that pairs autofluorescence imaging (AFI) with edge AI. It fuses three branches (a WLI RGB CNN, an AFI grayscale CNN and a metadata MLP) and targets sub-200 ms INT8 TFLite inference on an ESP32-S3." width="100%">
 
